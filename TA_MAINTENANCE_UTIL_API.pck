@@ -852,6 +852,7 @@ IS
 BEGIN
    Client_SYS.Clear_Attr  (attr_);
    Client_SYS.Add_To_Attr ('VENDOR_PART_NO', part_no_, attr_);
+   --Case 0001 added comment
    Purchase_Part_Supplier_API.Modify__ (info_, objid_, objvers_, attr_, 'DO');
    Cbh_Utils_API.Log_Info ('Updated PPS record :P1 / :P2 / :P3', part_no_, contract_, vendor_);
    IF rollback_ = 'YES' THEN
